@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Driving Lobster</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo"><img src="logo.jpeg"></div>
+            <div class="title"><h1>Driving Lobster</h1></div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <a href="#section1" class="timeline-dot" data-date="2022-06" data-location="Vancouver"></a>
+                    <a href="#section2" class="timeline-dot" data-date="2023-01" data-location="Washington DC"></a>
+                    <a href="#section3" class="timeline-dot" data-date="2023-04" data-location="New York City"></a>
+                    <a href="#section4" class="timeline-dot" data-date="2023-05" data-location="Japan"></a>
+                    <a href="#section5" class="timeline-dot" data-date="2023-11" data-location="Mexico"></a>
+                    <a href="#section6" class="timeline-dot" data-date="2024-06" data-location="Cross Canada trip"></a>
+                    <a href="#section7" class="timeline-dot" data-date="2025-06" data-location="Türkiye"></a>
+                </div>
+                <div class="tooltip" id="tooltip"></div>
+            </div>       
+        </main>
+        
+        <div id="section1" class="content-section">
+            <div class="section-text">
+                <h2>Vancouver - June 2022</h2>
+                <p>Sea to the sky scenic drive; whale watching; amazing seafood; stanley park riding</p>
+            </div>
+            <div class="section-image carousel">
+                <img src="vancouver1.JPEG" alt="Vancouver 1">
+                <img src="vancouver2.JPEG" alt="Vancouver 2">
+                <img src="vancouver3.JPEG" alt="Vancouver 3">
+            </div>
+        </div>
+        <div id="section2" class="content-section">
+            <div class="section-text">
+                <h2>Washington DC - January 2023</h2>
+                <p>Visited historical monuments and experienced the vibrant city life.</p>
+            </div>
+            <div class="section-image">
+                <img src="washington.jpeg" alt="Washington DC">
+            </div>
+        </div>
+        <div id="section3" class="content-section">
+            <div class="section-text">
+                <h2>New York City - April 2023</h2>
+                <p>Walked through Times Square and had the best pizza in town!</p>
+            </div>
+            <div class="section-image">
+                <img src="nyc.jpeg" alt="New York City">
+            </div>
+        </div>
+        <div id="section4" class="content-section">
+            <div class="section-text">
+                <h2>Japan - May 2023</h2>
+                <p>Cherry blossoms, ramen, and unforgettable temples.</p>
+            </div>
+            <div class="section-image">
+                <img src="japan.jpeg" alt="Japan">
+            </div>
+        </div>
+        <div id="section5" class="content-section">
+            <div class="section-text">
+                <h2>Mexico - November 2023</h2>
+                <p>Beach...</p>
+            </div>
+            <div class="section-image">
+                <img src="mexico.jpeg" alt="Mexico">
+            </div>
+        </div>
+        <div id="section6" class="content-section">
+            <div class="section-text">
+                <h2>Cross Canada Trip - June 2024</h2>
+                <p>Drive...</p>
+            </div>
+            <div class="section-image">
+                <img src="ccp.jpeg" alt="Cross Canada">
+            </div> 
+        </div>
+        <div id="section7" class="content-section">
+            <div class="section-text">
+                <h2>Türkiye - June 2025</h2>
+                <p>temples...</p>
+            </div>
+            <div class="section-image">
+                <img src="turkey.jpeg" alt="Turkey">
+            </div> 
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
