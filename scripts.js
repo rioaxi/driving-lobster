@@ -2,44 +2,81 @@ document.addEventListener("DOMContentLoaded", function () {
     const dots = document.querySelectorAll(".timeline-dot");
     const tooltip = document.getElementById("tooltip");
 
-    // Add event listener for each dot
     dots.forEach(dot => {
-        // Hover effect: show tooltip and make the dot bigger
+        const lobsterImg = document.createElement("img");
+        lobsterImg.src = "lobster.png";
+        lobsterImg.classList.add("lobster-icon");
+        lobsterImg.style.position = "absolute";
+        lobsterImg.style.width = "40px";
+        lobsterImg.style.height = "40px";
+        lobsterImg.style.display = "none"; 
+        dot.appendChild(lobsterImg);
+
         dot.addEventListener("mouseover", function (event) {
             const date = dot.getAttribute("data-date");
             const location = dot.getAttribute("data-location");
 
-            // Show the tooltip with date and location
             tooltip.innerHTML = `${date} - ${location}`;
             tooltip.style.display = "block";
 
-            // Get the position of the dot and position the tooltip just above it
             const rect = dot.getBoundingClientRect();
             tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.offsetWidth / 2}px`;
-            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`; // 5px gap above
+            tooltip.style.top = `${rect.top - tooltip.offsetHeight - 10}px`;
 
-            // Make the dot bigger
+            lobsterImg.style.display = "block";
+            lobsterImg.style.left = "50%";
+            lobsterImg.style.transform = "translateX(-50%)";
+            lobsterImg.style.top = "25px";
+
             dot.style.transform = "scale(1.3)";
         });
 
-        // Mouse leave: Hide tooltip and revert dot size
         dot.addEventListener("mouseleave", function () {
             tooltip.style.display = "none";
             dot.style.transform = "scale(1)";
+            lobsterImg.style.display = "none";
         });
 
-        // Click: Redirect to the corresponding section on the same page
         dot.addEventListener("click", function () {
-            const targetSectionId = dot.getAttribute("data-url"); // Use data-url for target section ID
+            const targetSectionId = dot.getAttribute("data-url");
             const targetSection = document.getElementById(targetSectionId);
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: "smooth" });
             }
         });
     });
+
+    document.querySelectorAll('.carousel-wrapper').forEach(container => {
+        let index = 0;
+        const carousel = container.querySelector('.carousel');
+        const images = container.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+        const leftArrow = container.querySelector('.prev');
+        const rightArrow = container.querySelector('.next');    
+    
+        function nextImage() {
+            index = (index + 1) % totalImages; 
+            updateCarousel();
+        }
+    
+        function prevImage() {
+            index = (index - 1 + totalImages) % totalImages; 
+            updateCarousel();
+        }
+    
+        function updateCarousel() {
+            const imageWidth = images[0].clientWidth + 15; 
+            carousel.style.transform = `translateX(${-index * imageWidth}px)`;
+        }
+
+        leftArrow.addEventListener('click', () => {
+            prevImage();
+            resetInterval();
+        });
+    
+        rightArrow.addEventListener('click', () => {
+            nextImage();
+            resetInterval();
+        });
+    });
 });
-
-
-function toggleMenu() {
-    document.querySelector('.menu').classList.toggle('active');
-}

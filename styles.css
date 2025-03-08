@@ -1,4 +1,3 @@
-/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +13,19 @@ header {
     padding: 15px 20px;
     background: #211A75;
     color: #F4F0E2;
+}
+
+h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #211A75;
+}
+
+p{
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #211A75;
 }
 
 .logo img{
@@ -38,6 +50,13 @@ header {
     font-size: 16px;
 }
 
+.content-about {
+    background-color: #F4F0E2;
+    padding: 20px;
+    text-align: center;
+    color: #211A75;
+}
+
 html {
     scroll-behavior: smooth; 
 }
@@ -55,6 +74,11 @@ main {
     width: 80%;
     max-width: 1200px;
     position: relative;
+    margin: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
 }
 
 .timeline {
@@ -63,7 +87,8 @@ main {
     align-items: center;
     position: relative;
     width: 100%;
-    height: 10px;
+    min-height: 10px;
+    height: auto; 
 }
 
 .timeline::before {
@@ -87,10 +112,6 @@ main {
     transition: transform 0.3s ease-in-out;
 }
 
-.timeline-dot:hover {
-    transform: scale(1.5);
-}
-
 .tooltip {
     position: fixed;
     background: #F4F0E2;
@@ -110,46 +131,90 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px;
-    text-align: left;
+    padding: 50px 0;
+    text-align: center;
     font-size: 18px;
     border-bottom: 1px solid #ccc;
 }
 
 .content-section:nth-child(odd) {
-    flex-direction: row; /* Text on left, image on right */
+    flex-direction: row; 
 }
 
 .content-section:nth-child(even) {
-    flex-direction: row-reverse; /* Text on right, image on left */
+    flex-direction: row-reverse; 
 }
 
 .section-text {
-    flex: 1;
-    padding: 20px;
+    width: 100%; 
+    max-width: 500px; 
+    height: 200px; 
+    overflow: auto; 
+    padding: 20px; 
+    border-radius: 8px; 
+    position: relative;
+    box-sizing: border-box; 
+  }
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 5px; 
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 90%; 
+    max-width: 600px; 
 }
 
 .carousel {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 10px;
+    transition: transform 0.5s ease;
 }
 
 .carousel img {
-    width: 300px;
-    height: auto;
-    scroll-snap-align: start;
-    border-radius: 8px;
+    width: auto; 
+    height: 200px; 
+    margin-right: 10px; 
+    transition: transform 0.3s ease-in-out;
 }
 
-#section1 { background-color: #ddddff; }
-#section2 { background-color: #F4F0E2; }
-#section3 { background-color: #ddddff; }
-#section4 { background-color: #F4F0E2; }
-#section5 { background-color: #ddddff; }
-#section6 { background-color: #F4F0E2; }
-#section7 { background-color: #ddddff; }
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+
+
+.carousel img:hover {
+    transform: scale(1.5); /* Enlarge on hover */
+    z-index: 10; /* Bring hovered image to the front */
+}
+  
+
+.carousel-container:hover .carousel {
+    transform: scale(1.1); /* Slightly zoom out the carousel to give space for enlarged image */
+}
+
+
+#section1 { background-color: #F4F0E2; }
+#section2 { background-color: #ECEAE5; }
+#section3 { background-color: #F4F0E2; }
+#section4 { background-color: #ECEAE5; }
+#section5 { background-color: #F4F0E2; }
+#section6 { background-color: #ECEAE5; }
 
 .menu-toggle {
     display: none;
@@ -179,5 +244,29 @@ main {
 
     .menu.active {
         display: flex;
+    }
+
+    .timeline-container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .timeline::before {
+        height: 100%;
+        width: 2.5px;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    .timeline-dot {
+        margin: 15px 0; /* Space out dots for vertical layout */
     }
 }
