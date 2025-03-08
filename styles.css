@@ -199,13 +199,13 @@ main {
 
 
 .carousel img:hover {
-    transform: scale(1.5); /* Enlarge on hover */
-    z-index: 10; /* Bring hovered image to the front */
+    transform: scale(1.5); 
+    z-index: 10; 
 }
   
 
 .carousel-container:hover .carousel {
-    transform: scale(1.1); /* Slightly zoom out the carousel to give space for enlarged image */
+    transform: scale(1.1); 
 }
 
 
@@ -267,6 +267,6 @@ main {
     }
 
     .timeline-dot {
-        margin: 15px 0; /* Space out dots for vertical layout */
+        margin: 15px 0; 
     }
 }
