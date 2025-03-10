@@ -1,0 +1,9 @@
+In Progress:
+
+
+
+Todo:
+- Add contact recipient 
+- bio
+- dark/french mode
+- move dots higher up
