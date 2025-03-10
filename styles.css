@@ -5,27 +5,33 @@
     font-family: Arial, sans-serif;
 }
 
-/* Header styles */
+:root {
+    --navy-blue: #211A75;
+    --lighter-navy: #3f34a8;
+    --main-white: #F4F0E2;
+    --mini-grey: #ECEAE5;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: #211A75;
-    color: #F4F0E2;
+    background: var(--navy-blue);
+    color: var(--main-white);
 }
 
 h2{
     font-size: 24px;
     margin-bottom: 10px;
     margin-top: 10px;
-    color: #211A75;
+    color: var(--navy-blue);
 }
 
 p{
     margin-bottom: 5px;
     font-size: 16px;
-    color: #211A75;
+    color: var(--navy-blue);
 }
 
 .logo img{
@@ -45,16 +51,15 @@ p{
 }
 
 .menu li a {
-    color: #F4F0E2;
+    color: var(--main-white);
     text-decoration: none;
     font-size: 16px;
 }
 
-.content-about {
-    background-color: #F4F0E2;
+.about-section {
+    background-color: var(--main-white);
     padding: 20px;
     text-align: center;
-    color: #211A75;
 }
 
 html {
@@ -67,7 +72,7 @@ main {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #F4F0E2;
+    background-color: var(--main-white);
 }
 
 .timeline-container {
@@ -98,7 +103,7 @@ main {
     left: 0;
     width: 100%;
     height: 2.5px;
-    background-color: #211A75;
+    background-color: var(--navy-blue);
     transform: translateY(-50%);
     z-index: 1; 
 }
@@ -107,15 +112,15 @@ main {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #211A75;
+    background-color: var(--navy-blue);
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
 .tooltip {
     position: fixed;
-    background: #F4F0E2;
-    color: #211A75;
+    background: var(--main-white);
+    color: var(--navy-blue);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 20px;
@@ -165,7 +170,7 @@ main {
 
 .carousel-container {
     overflow: hidden;
-    width: 90%; 
+    width: 95%; 
     max-width: 600px; 
 }
 
@@ -196,25 +201,73 @@ main {
     background-color: rgba(0, 0, 0, 0.8);
 }
   
-
-
 .carousel img:hover {
     transform: scale(1.5); 
     z-index: 10; 
 }
   
-
 .carousel-container:hover .carousel {
     transform: scale(1.1); 
 }
 
+#section1 { background-color: var(--main-white); }
+#section2 { background-color: var(--mini-grey);}
+#section3 { background-color: var(--main-white);}
+#section4 { background-color:  var(--mini-grey);}
+#section5 { background-color: var(--main-white);}
+#section6 { background-color:  var(--mini-grey);}
 
-#section1 { background-color: #F4F0E2; }
-#section2 { background-color: #ECEAE5; }
-#section3 { background-color: #F4F0E2; }
-#section4 { background-color: #ECEAE5; }
-#section5 { background-color: #F4F0E2; }
-#section6 { background-color: #ECEAE5; }
+.contact-section {
+    padding: 50px;
+    background-color:  var(--mini-grey);
+    text-align: center;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-form-container form {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--main-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.contact-form-container button {
+    padding: 10px 20px;
+    background-color: var(--navy-blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form-container button:hover {
+    background-color: var(--lighter-navy);
+}
 
 .menu-toggle {
     display: none;
@@ -229,7 +282,7 @@ main {
         position: absolute;
         top: 60px;
         right: 20px;
-        background: #211A75;
+        background: var(--navy-blue);
         padding: 10px;
         border-radius: 5px;
     }

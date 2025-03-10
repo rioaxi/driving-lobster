@@ -18,7 +18,7 @@
             </ul>
         </header>
 
-        <div id="about" class="content-about">
+        <div id="about" class="about-section">
             <h2>About Us</h2>
             <p>We are passionate driving lobsters, travelers exploring the world one destination at a time. </p>
             <h2>Join Us for Our Journey and Enjoy!</h2>
@@ -161,6 +161,28 @@
                 <button class="next">&#10095;</button>
             </div>
         </div>
+
+        <div id="contact" class="contact-section">
+            <div>
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you! Feel free to reach out to us using the form below.</p>
+            </div>   
+            <div class="contact-form-container">
+                <form action="/submit-form" method="POST">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </div>       
+        </div>
+
         <script src="scripts.js"></script>
     </body>
 </html>
