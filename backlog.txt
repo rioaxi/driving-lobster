@@ -1,11 +1,12 @@
 In Progress:
-
-
+- phone screen
 
 Todo:
-- Add contact recipient 
-- bio text
 - dark/french mode
-- move dots higher up
 - Add social media links
-- phone screen
+
+
+Checked
+x Add contact recipient 
+x bio text
+x move dots higher up
