@@ -1,12 +1,15 @@
 In Progress:
-- phone screen
+
+- contact us form
 
 Todo:
 - dark/french mode
-- Add social media links
+
 
 
 Checked
 x Add contact recipient 
 x bio text
 x move dots higher up
+x Add social media icon
+x phone screen (hide the text when too narrow)

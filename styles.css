@@ -29,6 +29,13 @@ h2{
     color: var(--navy-blue);
 }
 
+h3{
+    font-size: 24x;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: var(--navy-blue);
+}
+
 p{
     margin-bottom: 5px;
     font-size: 20px;
@@ -231,6 +238,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .contact-form-container form {
@@ -245,6 +253,7 @@ main {
 .contact-form-container label {
     font-size: 1.1em;
     margin-bottom: 5px;
+    color: var(--navy-blue);
 }
 
 .contact-form-container input,
@@ -270,6 +279,22 @@ main {
 
 .contact-form-container button:hover {
     background-color: var(--lighter-navy);
+}
+
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-media a {
+    font-size: 30px;
+    color: red;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: darkred;
 }
 
 .menu-toggle {
@@ -324,5 +349,9 @@ main {
 
     .timeline-dot {
         margin: 15px 0; 
+    }
+
+    .section-text{
+        display: none;
     }
 }
