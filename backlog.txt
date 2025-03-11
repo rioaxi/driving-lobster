@@ -4,6 +4,8 @@ In Progress:
 
 Todo:
 - Add contact recipient 
-- bio
+- bio text
 - dark/french mode
 - move dots higher up
+- Add social media links
+- phone screen
